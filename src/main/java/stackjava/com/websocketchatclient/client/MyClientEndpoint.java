@@ -21,7 +21,7 @@ public class MyClientEndpoint {
 	private JTextArea textAreaMessage;
 
 	public MyClientEndpoint(JTextArea textAreaMessage) throws URISyntaxException, DeploymentException, IOException {
-		URI uri = new URI("ws://localhost:8080/WebSocketChatServer/chatRoomServer");
+		URI uri = new URI("ws://webchatserver.azurewebsites.net/WebSocketChatServer/chatRoomServer");
 		ContainerProvider.getWebSocketContainer().connectToServer(this, uri);
 		this.textAreaMessage = textAreaMessage;
 	}
